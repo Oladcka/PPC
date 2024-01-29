@@ -90,7 +90,7 @@
 <body>
 
 <header th:insert ="~{fragments/header :: header}"></header>
-<div class="container" style="margin-right: 100px; padding-left: 200px; padding-right: 300px; height: 80vh">
+<div class="container" style="margin-right: 100px; padding-left: 200px; padding-right: 300px; height: 80vh;  overflow-y: scroll; overflow-x: hidden">
         <div th:each="clean : ${cleans}">
             <br>
             <div class="card">
@@ -141,6 +141,7 @@
                 </div>
             </div>
         </div>
+        <br>
         </div>
         <br/>
 </div>

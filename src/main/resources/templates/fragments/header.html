@@ -67,7 +67,7 @@
   <nav class="nav" aria-label="Secondary navigation" style="background-color: #ffc24b; color: black">
     <ul class="nav justify-content-end">
       <a href="/" class="d-inline-flex link-body-emphasis text-decoration-none">
-        <img src="/static/images/logo.png" alt="Logo" height="40" width="40">
+        <img src="/static/images/home.png" alt="Home" height="40" width="40" style="padding: 10px; margin-left: 3px">
       </a>
       <li th:if="${#authorization.expression('hasRole(''ROLE_SPECIALIST'')')}">
         <a class="nav-link" th:href="@{/loadRep}" style="background-color: #ffc24b; color: black">Чистки</a>

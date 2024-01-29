@@ -368,7 +368,7 @@
                     </table>
                 </div>
             </div>
-            <div th:if="${#lists.isEmpty(negPhrases)}">
+            <div th:if="${#lists.isEmpty(negPhrases) && #lists.isEmpty(searchQueries)}">
                 <div class="row">
                     <br>
                     <label style="text-align: center; color: firebrick">Нет выбранных минус-фраз</label>
@@ -402,7 +402,7 @@
                     </table>
                 </div>
             </div>
-            <div th:if="${#lists.isEmpty(negPhrases)}">
+            <div th:if="${#lists.isEmpty(negPhrases) && #lists.isEmpty(searchQueries)}">
                 <div class="row">
                     <br>
                     <label style="text-align: center; color: firebrick">Нет выбранных минус-фраз</label>
