@@ -115,17 +115,18 @@
                     </div>
                     <div class="col">
                         <p class="card-text">
-                            <p> <small class="text-muted">Дата: </small><small style="font-weight: bolder" th:text="${clean.getDate()}"></small></p>
+                            <p><small class="text-muted">Дата: </small><small style="font-weight: bolder" th:text="${#strings.substring(clean.getDate(), 0, 16)}"></small></p>
                             <p> <small class="text-muted">Проект: </small><small style="font-weight: bolder" th:text="${clean.getProject()}"></small></p>
                             <p> <small class="text-muted">Специалист: </small><small style="font-weight: bolder" th:text="${clean.getUser().getLogin()}"></small></p>
                         </p>
                     </div>
-                    <div class="col" style="text-align: center">
+                    <div class="col" style="text-align: right">
+                        <br>
                         <br>
                         <form th:id="${clean.getId()}" class="needs-validation" style="padding: 10px" th:method="post" th:action="@{/questionCard}">
-                            <input name="cleanId" id="cleanId" style="visibility: hidden">
+                            <input name="cleanId" id="cleanId" style="display: none">
                             <button class="btn btn-outline-primary me-2" style="background-color: transparent; color: black; border-color: transparent" type="submit">
-                                <img src="/static/images/open.png" alt="Вопрос" height="100" width="100">
+                                <img src="/static/images/open.png" alt="Вопрос" height="60" width="60">
                             </button>
                         </form>
                         <script>

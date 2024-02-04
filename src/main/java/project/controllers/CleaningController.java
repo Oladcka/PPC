@@ -836,23 +836,6 @@ public class CleaningController {
         }
     }
 
-//    private void articleList (List<String> articleList) {
-//        articleList.add("в");
-//        articleList.add("за");
-//        articleList.add("на");
-//        articleList.add("до");
-//        articleList.add("к");
-//        articleList.add("под");
-//        articleList.add("через");
-//        articleList.add("для");
-//        articleList.add("по");
-//        articleList.add("от");
-//        articleList.add("у");
-//        articleList.add("и");
-//        articleList.add("или");
-//        articleList.add("с");
-//    }
-
     private String[] removeArticles (String[] text) {
        String[] articleList = {"в", "за", "на", "до", "к", "под", "через", "для", "по", "от", "у", "и", "или", "с"};
 

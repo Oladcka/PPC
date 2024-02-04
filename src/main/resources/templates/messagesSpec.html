@@ -90,7 +90,7 @@
 <body>
 
 <header th:insert ="~{fragments/header :: header}"></header>
-<div class="container" style="margin-right: 100px; padding-left: 200px; padding-right: 300px; height: 80vh">
+<div class="container" style="margin-right: 100px; padding-left: 200px; padding-right: 300px; height: 80vh;  overflow-y: scroll; overflow-x: hidden">
         <div th:each="clean : ${cleans}">
             <br>
             <div class="card">
@@ -120,12 +120,13 @@
                             <p> <small class="text-muted">Специалист: </small><small style="font-weight: bolder" th:text="${clean.getUser().getLogin()}"></small></p>
                         </p>
                     </div>
-                    <div class="col" style="text-align: center">
+                    <div class="col" style="text-align: right">
+                        <br>
                         <br>
                         <form th:id="${clean.getId()}" class="needs-validation" style="padding: 10px" th:method="post" th:action="@{/answerCard}">
-                            <input name="cleanId" id="cleanId" style="visibility: hidden">
+                            <input name="cleanId" id="cleanId" style="display: none">
                             <button class="btn btn-outline-primary me-2" style="background-color: transparent; color: black; border-color: transparent" type="submit">
-                                <img src="/static/images/open.png" alt="Вопрос" height="100" width="100">
+                                <img src="/static/images/open.png" alt="Вопрос" height="60" width="60">
                             </button>
                         </form>
                         <script>
